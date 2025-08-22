@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="viewport" content="width=device-width,  initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="trabalho2.css">
+<div class="login-box">
+<h2>Login</h2>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Usuário" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Senha" required>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div id="message" class="message"></div>
+
+        <div class="users-help">
+        </div>
+    </div>
+
+    <script>
+        // Usuários pré-definidos
+        const usuarios = [
+            { username: "admin", password: "senha123" },
+            { username: "usuario", password: "123456" },
+            { username: "teste", password: "teste123" }
+        ];
+
+        const form = document.getElementById('loginForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            let encontrado = false;
+
+            // Loop para verificar login
+            for (let i = 0; i < usuarios.length; i++) {
+                if (usuarios[i].username === user && usuarios[i].password === pass) {
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                mostrarMensagem('Login realizado com sucesso!', true);
+                form.reset();
+            } else {
+                mostrarMensagem('Usuário ou senha incorretos', false);
+                document.getElementById('password').value = '';
+            }
+        });
+
+        function mostrarMensagem(texto, sucesso) {
+            message.textContent = texto;
+            message.className = sucesso ? 'message success' : 'message error';
+            message.style.display = 'block';
+            
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
