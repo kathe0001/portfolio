@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo"> Bem-vindo(a)!</h1>
+    <p id="mensagem">Clique no botão para mudar a cor da página de acordo com o horário</p>
+    <p id="hora"></p>
+    <p id="data">Quarta Feira, 17 de Setembro</p>
+    
+
+    
+
+    <script>
+        function trocar() {
+            const agora = new Date(); 
+            const hora = agora.getHours();
+            const minutos = agora.getMinutes().toString().padStart(2, "0");
+
+            let cor;
+            let mensagem;
+            if (hora >= 6 && hora < 12) {
+                cor = "#FFD700";
+                mensagem = "Bom Dia!🌞";
+            } else if (hora >= 12 && hora < 18) {
+                cor = "#FF8C00";
+                mensagem = "Boa Tarde!🌤️";
+            } else if (hora >= 18 && hora < 23) {
+                cor = "#1E90FF";
+                mensagem = "Boa Noite!🌙";
+            } else {
+                cor = "#2F4F4F";
+                mensagem = "Hora de Descansar! 🌃"
+                
+            }
+            document.body.style.backgroundColor = cor;
+            document.getElementById("mensagem").innerText = "";
+            document.getElementById("titulo").innerHTML = mensagem;
+            document.getElementById("hora").innerText = `${hora}:${minutos}:${segundos}`;
+            const segundos = agora.getSeconds().toString.padStart(2, "0");
+            document.getElementById("Data").innerHTML = ""; 
+            
+        }
+        function mostrarData() {
+            const agora = new Date();
+            const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dataFormatada = agora.toLocaleDateString("pt-BR", opcoes);
+            document.getElementById("Data").innerHTML = dataFormatada;
+
+        
+        }
+setInterval(trocar, 1000);       
+window.onload = trocar;
+</script>
+</body>
+</html>
+
+<style>
+body {
+transition: background-color 2s;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(7, 7, 7);
+text-align: center;
+padding-top: 70px;    
+}
+
+button {
+padding: 20px;
+font-size: medium;
+margin-top: 20px;
+cursor: pointer;
+border: none;
+border-radius: 10px;    
+}
+
+@media(max-width: 768px){
+body{ font-size: medium; padding-top: 50px;}
+button{font-size: medium; padding: 16px;}    
+}
+
+
+</style>
