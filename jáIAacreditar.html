@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Fundo */
+body {
+    background: linear-gradient(135deg, #ee98ff, #9a08b0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa do chat */
+.chatbox {
+    background: #ffffff10;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    color: #fff;
+    border: 1px solid #ffffff20;
+    box-shadow: 0 0 20px #00000040;
+}
+
+/* Título */
+.chatbox h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botão */
+.chatbox button {
+    background: #b321d7;
+    border: none;
+    padding: 12px 22px;
+    color: white;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.chatbox button:hover {
+    background: #bb4bd7;
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+    <div class="chatbox">
+        <h2>Chatbox por voz</h2>
+        <button onclick="ouvir()">Falar agora</button>
+    </div>
+
+    <script>
+        const pergunta = ["como fazer a limpeza umbilical",
+        "como funciona um planejamento familiar","quais são os sinais vitais", "posições de parto","quais são os cuidados com feridas"];
+        const resposta = ["Não use álcool, apenas água e sabão. com o auxílio de cotonetes se necessário secar com gazes", "Planejamento familiar é quando o casal se prepara antes de ter filhos, cuidando da saúde e organizando o melhor momento para engravidar.", "frequência respiratória e cardíaca,pressão arterial, temperatura", "posições recomendadas são cócoras,de joelhos,em pé e de lado", "higienizar com soro e cloredixina,usando luvas e materiais necessários para minímo contato com a ferida, coloque a cobertura escolhida na ferida podendo ser carvão ativado ou outros escolhendo a melhor opção para aquela ferida. coloque gaze e enfaixe com atadura"];
+
+        function falar(texto) {
+            const discurso = new SpeechSynthesisUtterance(texto);
+            discurso.lang = "pt-br";
+            discurso.rate = 1;
+            window.speechSynthesis.speak(discurso);
+        }
+
+        function ouvir() {
+            const reconhecer = new webkitSpeechRecognition();
+            reconhecer.lang = "pt-br";
+            reconhecer.start();
+            reconhecer.onresult = function(event) {
+                const textoFalado = event.results[0][0].transcript.toLowerCase();
+
+                for (let i = 0; i < pergunta.length; i++) {
+                  if (textoFalado.includes(pergunta[i])){
+                    falar(resposta[i]);
+                    return;
+                  }
+                }
+
+                falar("Desculpe, eu não entendi.");
+              
+
+                if (textoFalado.includes(pergunta)) {
+                    falar(resposta);
+                }else {
+                    falar("Desculpe");
+                }
+            };
+        }
+    </script>
+    
+</body>
+</html>
