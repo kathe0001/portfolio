@@ -56,7 +56,7 @@ h1 {
  margin-bottom: 20px;
  text-align: center;
  border-radius: 5px;
- background-color: #3498db;
+ background: linear-gradient(135deg, #3498db, #2980b9);
  }
 
  nav {
@@ -72,7 +72,7 @@ h1 {
  }
 
  section {
-    background-color: #2980b9;
+   background: linear-gradient(135deg, #2980b9, #05d3f8);
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -89,9 +89,4 @@ h1 {
  p {
     text-align: center;
     margin-bottom: 15px;
- }
-
- footer {
-    background-color: #d6eaf8;
-    color: rgb(12, 12, 12);
  }
