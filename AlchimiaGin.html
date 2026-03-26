@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchimia Gin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+.carrossel {
+    position: relative;
+    max-width: 400px;
+    height: 400px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 3px solid #d1c930;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.carrossel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.carrossel img.ativa {
+    opacity: 1;
+}
+
+button{
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body class="bg-dark">
+    <header class="bg-golden py-3" style="background:linear-gradient(145deg, #cf7f17,#f4c45c)">
+        <div class="container text-center">
+            <img src="logo3.png" alt="logo" width="150px" height="150px" style="align-items: center;">
+            <h1>Alchimia Gin</h1>
+            <nav>
+                <a href="Alchimiagin2.html" class="botoes"><button>Visão da empresa</button></a>  
+                <a href="#NossaHistória" class="botoes"><button>Nossa História</button></a>
+                <a href="#NossosDrinks" class="botoes"><button>Nossos Drinks</button></a>
+                <a href="#NossosProdutos" class="botoes"><button>Nossos Produtos</button></a>
+            </nav>
+        </div>
+    </header>
+    <h2 class="text-center" style="color: #dfab3b;">Nossa História</h2>
+    <p class="text-center py-3" style="color: rgb(142, 127, 235);">A Alchimia Gin foi fundada em 2023 por jovens empreendedores apaixonados pelo universo das bebidas artesanais, inspirada no conceito de alquimia a transformação de elementos simples em algo extraordinário a empresa surgiu com o objetivo de criar Gins únicos, utilizando botânicos selecionados e processos artesanais que garantem sabor e identidade exclusivos
+    </p>
+    
+    <section id="NossosDrinks">
+        <h2 class="text-center" style="color: #dfab3b;">Nossos Drinks</h2>
+        <div class="carrossel">
+            <img src="gin1.png"  class="ativa">
+            <img src="gin2.png">
+    </div>
+    <div class="botoes" style="margin: auto; align-items: center;">
+        <button onclick="anterior()">Anterior</button>
+        <button onclick="proximo()">Próximo</button>
+    </div>
+    </section>
+
+    <section id="NossosProdutos">
+        <h2 class="text-center" style="color: #dfab3b;">Nossos Produtos</h2>
+        <div class="carrossel">
+            <img src="garrafa1.png" class="ativa">
+            <img src="garrafa2.png">
+        </div>
+        <div class="botoes" style="margin: auto; align-items: center;">
+        <button onclick="anterior()">Anterior</button>
+        <button onclick="proximo()">Próximo</button>
+    </div>
+    </section>
+
+
+    <script>
+        let indice = 0;
+     const imagens = document.querySelectorAll(".carrossel img"); 
+
+     function mostrarImagem(foto) {
+        imagens.forEach(img => img.classList.remove("ativa"));
+        imagens[foto].classList.add("ativa");
+     }
+
+     function proximo() {
+        indice = (indice + 1) % imagens.length;
+        mostrarImagem(indice);
+     } 
+
+     function anterior() {
+        indice = (indice - 1 + imagens.length) % imagens.length;
+        mostrarImagem(indice);
+     }
+    </script>
+</body>
+</html>
