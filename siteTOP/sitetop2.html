@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,7 +21,6 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-
     <style>
 
         :root {
@@ -31,14 +31,12 @@
             --border-color: rgba(11, 31, 58, 0.20);
         }
 
-
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--dark-bg);
             color: #111111;
             min-height: 100vh;
         }
-
 
         /* Navbar Estilizada */
 
@@ -47,13 +45,11 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-
         .brand-logo {
             max-width: 50px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
-
 
         .brand-text {
             font-weight: 800;
@@ -62,7 +58,6 @@
             font-size: 1.1rem;
         }
 
-
         .nav-link {
             color: #555555 !important;
             font-weight: 500;
@@ -70,12 +65,10 @@
             transition: color 0.3s ease;
         }
 
-
         .nav-link:hover,
         .nav-link.active {
             color: var(--primary-gold) !important;
         }
-
 
         /* Banner */
 
@@ -88,7 +81,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
         }
-
 
         .welcome-card::after {
             content: '';
@@ -103,7 +95,6 @@
             pointer-events: none;
         }
 
-
         /* Cards de roupas */
 
         .car-card {
@@ -114,13 +105,11 @@
             transition: all 0.3s ease;
         }
 
-
         .car-card:hover {
             transform: translateY(-6px);
             border-color: var(--primary-gold);
             box-shadow: 0 12px 30px rgba(11, 31, 58, 0.15);
         }
-
 
         .car-img-wrapper {
             position: relative;
@@ -131,7 +120,6 @@
             align-items: center;
             justify-content: center;
         }
-
 
         .clothing-symbol {
             width: 70px;
@@ -146,7 +134,6 @@
             font-weight: 700;
         }
 
-
         .badge-status {
             position: absolute;
             top: 15px;
@@ -159,7 +146,6 @@
             padding: 5px 12px;
             border-radius: 20px;
         }
-
 
         /* Botões */
 
@@ -174,14 +160,12 @@
             cursor: pointer;
         }
 
-
         .btn-gold:hover {
             background: var(--primary-gold-hover);
             color: #ffffff;
             box-shadow: 0 4px 15px rgba(11, 31, 58, 0.25);
             transform: translateY(-2px);
         }
-
 
         .btn-outline-gold {
             border: 1px solid var(--primary-gold);
@@ -194,19 +178,16 @@
             cursor: pointer;
         }
 
-
         .btn-outline-gold:hover {
             background: var(--primary-gold);
             color: #ffffff;
             transform: translateY(-2px);
         }
 
-
         .spec-item {
             font-size: 0.85rem;
             color: #666666;
         }
-
 
         .spec-item i {
             color: var(--primary-gold);
@@ -216,9 +197,7 @@
 
 </head>
 
-
 <body>
-
 
     <!-- Menu Navegação -->
 
@@ -228,52 +207,48 @@
 
             <a class="navbar-brand d-flex align-items-center gap-2" href="#">
 
-                <div class="clothing-symbol"
-                    style="width: 50px; height: 50px; border-radius: 8px; font-size: 0.9rem;">
+                <!-- REMOVIDO O QUADRADO VAZIO DA NAVBAR -->
 
+            </a>
 
-                <!-- Perfil do Usuário -->
+            <!-- Perfil do Usuário -->
 
-                <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-3">
 
-                    <div class="text-end d-none d-sm-block">
+                <div class="text-end d-none d-sm-block">
 
-                        <div class="fw-bold small"
-                            style="color:#111111;"
-                            id="nomeUsuarioExibicao">
+                    <div class="fw-bold small"
+                        style="color:#111111;"
+                        id="nomeUsuarioExibicao">
 
-                            Cliente
-
-                        </div>
-
-                        <span class="badge"
-                            style="font-size: 0.65rem;
-                            background-color: var(--primary-gold) !important;
-                            color: #fff;">
-
-                            CLIENTE EXCLUSIVO
-
-                        </span>
+                        Cliente
 
                     </div>
 
+                    <span class="badge"
+                        style="font-size: 0.65rem;
+                        background-color: var(--primary-gold) !important;
+                        color: #fff;">
 
-                    <a href="sitetop.html"
-                        class="btn btn-outline-dark btn-sm rounded-circle p-2"
-                        title="Sair da Conta">
+                        CLIENTE EXCLUSIVO
 
-                        <i class="bi bi-box-arrow-right"></i>
-
-                    </a>
+                    </span>
 
                 </div>
+
+                <a href="sitetop.html"
+                    class="btn btn-outline-dark btn-sm rounded-circle p-2"
+                    title="Sair da Conta">
+
+                    <i class="bi bi-box-arrow-right"></i>
+
+                </a>
 
             </div>
 
         </div>
 
     </nav>
-
 
 
     <!-- Conteúdo Principal -->
@@ -296,7 +271,6 @@
 
                     </span>
 
-
                     <h1 class="h2 fw-bold mt-1"
                         style="color:#111111;">
 
@@ -305,17 +279,11 @@
 
                     </h1>
 
-
-                    
-
-                    </div>
-
                 </div>
 
             </div>
 
         </section>
-
 
 
         <section>
@@ -325,22 +293,19 @@
 
                 <!-- Peça 1 -->
 
-                <div  class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4">
 
                     <div class="car-card">
 
                         <div class="car-img-wrapper">
 
-                            <div class="clothing-symbol">
-                                
-                            </div>
+                            <div class="clothing-symbol"></div>
 
                             <span class="badge-status">
-                                Disponível 
+                                Disponível
                             </span>
 
                         </div>
-
 
                         <div class="p-4">
 
@@ -351,7 +316,6 @@
 
                             </h5>
 
-
                             <p class="small mb-3"
                                 style="color:#666666;">
 
@@ -359,7 +323,6 @@
                                 Modelagem contemporânea
 
                             </p>
-
 
                             <div class="d-flex justify-content-between align-items-center">
 
@@ -370,9 +333,6 @@
 
                                 </span>
 
-
-                                
-
                             </div>
 
                         </div>
@@ -380,7 +340,6 @@
                     </div>
 
                 </div>
-
 
 
                 <!-- Peça 2 -->
@@ -391,16 +350,13 @@
 
                         <div class="car-img-wrapper">
 
-                            <div class="clothing-symbol">
-                                
-                            </div>
+                            <div class="clothing-symbol"></div>
 
                             <span class="badge-status">
                                 Disponível
                             </span>
 
                         </div>
-
 
                         <div class="p-4">
 
@@ -411,7 +367,6 @@
 
                             </h5>
 
-
                             <p class="small mb-3"
                                 style="color:#666666;">
 
@@ -419,7 +374,6 @@
                                 Corte reto
 
                             </p>
-
 
                             <div class="d-flex justify-content-between align-items-center">
 
@@ -430,9 +384,6 @@
 
                                 </span>
 
-
-                                
-
                             </div>
 
                         </div>
@@ -440,7 +391,6 @@
                     </div>
 
                 </div>
-
 
 
                 <!-- Peça 3 -->
@@ -451,9 +401,7 @@
 
                         <div class="car-img-wrapper">
 
-                            <div class="clothing-symbol">
-                                
-                            </div>
+                            <div class="clothing-symbol"></div>
 
                             <span class="badge-status">
                                 Disponível
@@ -461,16 +409,14 @@
 
                         </div>
 
-
                         <div class="p-4">
 
                             <h5 class="fw-bold mb-1"
                                 style="color:#111111;">
 
-                                Camisa Social 
+                                Camisa Social
 
                             </h5>
-
 
                             <p class="small mb-3"
                                 style="color:#666666;">
@@ -479,7 +425,6 @@
                                 Acabamento sofisticado
 
                             </p>
-
 
                             <div class="d-flex justify-content-between align-items-center">
 
@@ -490,9 +435,6 @@
 
                                 </span>
 
-
-                                
-
                             </div>
 
                         </div>
@@ -500,7 +442,6 @@
                     </div>
 
                 </div>
-
 
 
                 <!-- Peça 4 -->
@@ -511,35 +452,30 @@
 
                         <div class="car-img-wrapper">
 
-                            <div class="clothing-symbol">
-                                
-                            </div>
+                            <div class="clothing-symbol"></div>
 
                             <span class="badge-status">
-                                Disponível 
+                                Disponível
                             </span>
 
                         </div>
-
 
                         <div class="p-4">
 
                             <h5 class="fw-bold mb-1"
                                 style="color:#111111;">
 
-                                Colete 
+                                Colete
 
                             </h5>
-
 
                             <p class="small mb-3"
                                 style="color:#666666;">
 
                                 Alfaiataria • Preto •
-                                Minimalista 
+                                Minimalista
 
                             </p>
-
 
                             <div class="d-flex justify-content-between align-items-center">
 
@@ -550,9 +486,6 @@
 
                                 </span>
 
-
-                                
-
                             </div>
 
                         </div>
@@ -560,7 +493,6 @@
                     </div>
 
                 </div>
-
 
 
                 <!-- Peça 5 -->
@@ -571,16 +503,13 @@
 
                         <div class="car-img-wrapper">
 
-                            <div class="clothing-symbol">
-                                
-                            </div>
+                            <div class="clothing-symbol"></div>
 
                             <span class="badge-status">
-                                Disponível 
+                                Disponível
                             </span>
 
                         </div>
-
 
                         <div class="p-4">
 
@@ -591,7 +520,6 @@
 
                             </h5>
 
-
                             <p class="small mb-3"
                                 style="color:#666666;">
 
@@ -599,7 +527,6 @@
                                 Corte contemporâneo
 
                             </p>
-
 
                             <div class="d-flex justify-content-between align-items-center">
 
@@ -610,9 +537,6 @@
 
                                 </span>
 
-
-                                
-
                             </div>
 
                         </div>
@@ -620,7 +544,6 @@
                     </div>
 
                 </div>
-
 
 
                 <!-- Peça 6 -->
@@ -636,11 +559,10 @@
                             </div>
 
                             <span class="badge-status">
-                                Disponível 
+                                Disponível
                             </span>
 
                         </div>
-
 
                         <div class="p-4">
 
@@ -651,7 +573,6 @@
 
                             </h5>
 
-
                             <p class="small mb-3"
                                 style="color:#666666;">
 
@@ -659,7 +580,6 @@
                                 Silhueta elegante
 
                             </p>
-
 
                             <div class="d-flex justify-content-between align-items-center">
 
@@ -669,9 +589,6 @@
                                     R$ 429,90
 
                                 </span>
-
-
-                                
 
                             </div>
 
@@ -690,7 +607,6 @@
     </main>
 
 
-
     <!-- Scripts Bootstrap -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
@@ -699,3 +615,4 @@
 </body>
 
 </html>
+```
